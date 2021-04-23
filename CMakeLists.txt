@@ -26,6 +26,10 @@ add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/ports/${THREADX_ARCH}/${THREADX_TOOLC
 # Pick up the common stuff
 add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/common)
 
+# Pick up common_modules to create txm library
+set(THREADX_COMMON_INC ${CMAKE_CURRENT_LIST_DIR}/common/inc)
+set(THREADX_PORTS_MODULE ${CMAKE_CURRENT_LIST_DIR}/ports_module/${THREADX_ARCH}/${THREADX_TOOLCHAIN})
+add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/common_modules)
 
 
 
